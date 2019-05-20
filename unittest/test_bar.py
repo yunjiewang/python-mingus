@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-from mingus.core.keys import Key
-from mingus.containers.bar import Bar
-from mingus.containers.note import Note
-from mingus.containers.note_container import NoteContainer
-from mingus.containers.mt_exceptions import MeterFormatError
+from mingus3.core.keys import Key
+from mingus3.containers.bar import Bar
+from mingus3.containers.note import Note
+from mingus3.containers.note_container import NoteContainer
+from mingus3.containers.mt_exceptions import MeterFormatError
 import unittest
 
 

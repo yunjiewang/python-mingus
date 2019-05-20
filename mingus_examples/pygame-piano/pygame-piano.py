@@ -40,11 +40,11 @@
 
 import pygame
 from pygame.locals import *
-from mingus.core import notes, chords
-from mingus.containers import *
-from mingus.midi import fluidsynth
+from mingus3.core import notes, chords
+from mingus3.containers import *
+from mingus3.midi import fluidsynth
 from os import sys
-SF2 = 'soundfont.sf2'
+SF2 = r'D:\Documents\MuseScore3\SoundFonts\Arachno SoundFont - Version 1.0.sf2'
 OCTAVES = 5  # number of octaves to show
 LOWEST = 2  # lowest octave to show
 FADEOUT = 0.25  # coloration fadeout time (1 tick = 0.001)

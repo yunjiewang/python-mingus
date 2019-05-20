@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import mingus.core.value as value
+import mingus3.core.value as value
 import unittest
 
 

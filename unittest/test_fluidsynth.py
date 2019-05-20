@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-from mingus.midi import fluidsynth
-from mingus.containers import *
+from mingus3.midi import fluidsynth
+from mingus3.containers import *
 import unittest
 import time
-from mingus.midi.sequencer_observer import SequencerObserver
+from mingus3.midi.sequencer_observer import SequencerObserver
 
 class test_fluidsynth(unittest.TestCase):
 

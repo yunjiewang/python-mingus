@@ -12,18 +12,17 @@
     Based on play_progression.py
 """
 
-from mingus.core import progressions, intervals
-from mingus.core import chords as ch
-from mingus.containers import NoteContainer, Note
-from mingus.midi import fluidsynth
+from mingus3.core import progressions, intervals
+from mingus3.core import chords as ch
+from mingus3.containers import NoteContainer, Note
+from mingus3.midi import fluidsynth
 import time
 import sys
 from random import random, choice, randrange
-SF2 = 'soundfont.sf2'
+SF2 = r'D:\Documents\MuseScore3\SoundFonts\Arachno SoundFont - Version 1.0.sf2'
 progression = ['I', 'bVdim7']
 
-# progression = ["I", "vi", "ii", "iii7",               "I7", "viidom7", "iii7",
-# "V7"]
+# progression = ["I", "vi", "ii", "iii7", "I7", "viidom7", "iii7", "V7"]
 
 key = 'C'
 

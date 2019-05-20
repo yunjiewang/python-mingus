@@ -3,7 +3,7 @@
 import sys
 sys.path = ['../'] + sys.path
 import unittest
-import mingus.core.progressions as progressions
+import mingus3.core.progressions as progressions
 
 
 class test_progressions(unittest.TestCase):

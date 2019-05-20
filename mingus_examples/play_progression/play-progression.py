@@ -9,14 +9,14 @@
     You should specify the SF2 soundfont file.
 """
 
-from mingus.core import progressions, intervals
-from mingus.core import chords as ch
-from mingus.containers import NoteContainer, Note
-from mingus.midi import fluidsynth
+from mingus3.core import progressions, intervals
+from mingus3.core import chords as ch
+from mingus3.containers import NoteContainer, Note
+from mingus3.midi import fluidsynth
 import time
 import sys
 from random import random
-SF2 = 'soundfont_example.sf2'
+SF2 = r'D:\Documents\MuseScore3\SoundFonts\Arachno SoundFont - Version 1.0.sf2'
 progression = [
     'I',
     'vi',

@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-import mingus.core.keys as keys
-from mingus.core.mt_exceptions import NoteFormatError, KeyError
+import mingus3.core.keys as keys
+from mingus3.core.mt_exceptions import NoteFormatError, KeyError
 import unittest
 
 class test_keys(unittest.TestCase):
@@ -64,7 +64,14 @@ class test_keys(unittest.TestCase):
                     'The minor of %s is not %s, expecting %s' % (k,
                         keys.relative_minor(k), known[k]))
 
+    def test_key_equality(self):
+        self.assertTrue(keys.Key('Cb') != keys.Key('B'))
+        self.assertEqual(keys.Key('E'), keys.Key('E'))
+        self.assertTrue(keys.Key('G') != keys.Key('A'))
+
 
 def suite():
     return unittest.TestLoader().loadTestsFromTestCase(test_keys)
 
+if __name__ == '__main__':
+    unittest.main()

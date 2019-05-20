@@ -1,13 +1,14 @@
 import sys
 sys.path += ["../"]
 
-import mingus.extra.musicxml as mxl
+import mingus3.extra.musicxml as mxl
 import unittest
 
 class test_MusicXML(unittest.TestCase):
 	
 	def setUp(self):
-                pass
+		pass
+
 
 
 def suite():

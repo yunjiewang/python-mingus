@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-from mingus.containers.suite import Suite
+from mingus3.containers.suite import Suite
 import unittest
 
 

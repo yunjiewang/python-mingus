@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path = ['../'] + sys.path
-import mingus.core.chords as chords
-from mingus.core.mt_exceptions import RangeError, FormatError, NoteFormatError
+import mingus3.core.chords as chords
+from mingus3.core.mt_exceptions import RangeError, FormatError, NoteFormatError
 import unittest
 
 
@@ -317,7 +317,7 @@ class test_chords(unittest.TestCase):
             'A6/7': ['A', 'C#', 'E', 'F#', 'G'],
             'A67': ['A', 'C#', 'E', 'F#', 'G'],
             'A5': ['A', 'E'],
-            'Ahendrix': ['A', 'C#', 'E', 'G', 'C'],
+            'Ahendrix': ['A', 'C#', 'E', 'G', 'B#'],
             'N.C.': [],
             'NC': [],
             'Dm|G': ['G', 'B', 'D', 'F', 'A'],
@@ -350,15 +350,18 @@ class test_chords(unittest.TestCase):
             self.assertRaises(NoteFormatError, chords.from_shorthand, x[1:])
 
     def test_determine(self):
-        list(map(lambda x: self.assertEqual(True,
-            chords.determine(chords.from_shorthand('C' + x)) != [],
-            "'C%s' should return a value" % x), list(chords.chord_shorthand.keys())))
-        list(map(lambda x: self.assertEqual('C' + chords.chord_shorthand_meaning[x],
-            chords.determine(chords.from_shorthand('C' + x))[0],
-            "The proper naming of '%s' is not '%s',expecting '%s'" % ('C' + x,
-            chords.determine(chords.from_shorthand('C' + x)), 'C'
-             + chords.chord_shorthand_meaning[x])), [x for x in
-            list(chords.chord_shorthand.keys()) if x != '5']))
+        for qual in chords.chord_shorthand.keys():
+            self.assertTrue(chords.determine(chords.from_shorthand('C' + qual)) != [],
+                            "'C %s' should return a value" % qual),
+            if qual != '5':
+                left_part = 'C' + chords.chord_shorthand_meaning[qual]
+                right_part = chords.determine(chords.from_shorthand('C' + qual))[0]
+                _actual = chords.determine(chords.from_shorthand('C' + qual))
+                _expected = chords.chord_shorthand_meaning[qual]
+                error_msg = f"The proper naming of 'C{qual}' is not " \
+                            f"'{_actual}', expecting 'C{_expected}'"
+                self.assertEqual(left_part, right_part, error_msg)
+
         self.chordsTest([[['A13'], [
             'A',
             'C#',

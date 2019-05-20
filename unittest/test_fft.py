@@ -3,8 +3,8 @@
 import sys
 sys.path += ['../']
 import unittest
-import mingus.extra.fft as fft
-from mingus.containers import *
+import mingus3.extra.fft as fft
+from mingus3.containers import *
 
 
 class test_fft(unittest.TestCase):

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-import mingus.core.meter as meter
+import mingus3.core.meter as meter
 import unittest
 
 

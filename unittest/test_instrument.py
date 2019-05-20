@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-from mingus.containers.instrument import Instrument, Piano, Guitar
-from mingus.containers.note_container import NoteContainer
+from mingus3.containers.instrument import Instrument, Piano, Guitar
+from mingus3.containers.note_container import NoteContainer
 import unittest
 
 

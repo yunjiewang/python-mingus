@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path = ['../'] + sys.path
-import mingus.core.notes as notes
-from mingus.core.mt_exceptions import RangeError
+import mingus3.core.notes as notes
+from mingus3.core.mt_exceptions import RangeError
 import unittest
 
 class test_notes(unittest.TestCase):

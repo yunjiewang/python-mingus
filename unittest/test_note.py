@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-from mingus.containers.note import Note
+from mingus3.containers.note import Note
 import unittest
-from mingus.containers.mt_exceptions import NoteFormatError
+from mingus3.containers.mt_exceptions import NoteFormatError
 
 
 class test_Note(unittest.TestCase):

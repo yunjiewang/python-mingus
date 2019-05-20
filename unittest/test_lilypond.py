@@ -3,13 +3,13 @@
 import sys
 sys.path += ['../']
 import unittest
-import mingus.extra.lilypond as LilyPond
-import mingus.core.value as value
-from mingus.containers.note import Note
-from mingus.containers.note_container import NoteContainer
-from mingus.containers.bar import Bar
-from mingus.containers.track import Track
-from mingus.containers.composition import Composition
+import mingus3.extra.lilypond as LilyPond
+import mingus3.core.value as value
+from mingus3.containers.note import Note
+from mingus3.containers.note_container import NoteContainer
+from mingus3.containers.bar import Bar
+from mingus3.containers.track import Track
+from mingus3.containers.composition import Composition
 
 class test_LilyPond(unittest.TestCase):
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-import mingus.core.intervals as intervals
+import mingus3.core.intervals as intervals
 import unittest
 
 
@@ -275,16 +275,15 @@ class test_intervals(unittest.TestCase):
         self.assertEqual('major third', intervals.determine('C', 'E'))
         self.assertEqual('minor third', intervals.determine('C', 'Eb'))
         self.assertEqual('diminished third', intervals.determine('C', 'Ebb'))
-        self.assertEqual('minor unison', intervals.determine('C', 'Cb'))
+        self.assertEqual('diminished unison', intervals.determine('C', 'Cb'))
         self.assertEqual('augmented unison', intervals.determine('Cb', 'C'))
-        self.assertEqual('diminished unison', intervals.determine('C', 'Cbb'))
-        self.assertEqual('augmented unison', intervals.determine('Cbb', 'C'))
-        self.assertEqual('minor unison', intervals.determine('A', 'Ab'))
-        self.assertEqual('diminished unison', intervals.determine('A', 'Abb'))
-        self.assertEqual('major unison', intervals.determine('A', 'A'))
-        self.assertEqual('augmented unison', intervals.determine('Abb', 'A'))
-        self.assertEqual('augmented unison', intervals.determine('A',
-                         'A##########'))
+        self.assertEqual('doubly diminished unison', intervals.determine('C', 'Cbb'))
+        self.assertEqual('doubly augmented unison', intervals.determine('Cbb', 'C'))
+        self.assertEqual('diminished unison', intervals.determine('A', 'Ab'))
+        self.assertEqual('doubly diminished unison', intervals.determine('A', 'Abb'))
+        self.assertEqual('perfect unison', intervals.determine('A', 'A'))
+        self.assertEqual('doubly augmented unison', intervals.determine('Abb', 'A'))
+        self.assertEqual('augmented unison', intervals.determine('A', 'A#'))
         self.assertEqual('major seventh', intervals.determine('Cb', 'Bb'))
         self.assertEqual('major seventh', intervals.determine('Cbb', 'Bbb'))
         self.assertEqual('major seventh', intervals.determine('Cbbb', 'Bbbb'))
@@ -293,7 +292,7 @@ class test_intervals(unittest.TestCase):
     def test_determine_shorthand(self):
         self.assertEqual('3', intervals.determine('C', 'E', True))
         self.assertEqual('b3', intervals.determine('C', 'Eb', True))
-        self.assertEqual('##3', intervals.determine('C', 'E##', True))
+        self.assertEqual('#3', intervals.determine('C', 'E#', True))
         self.assertEqual('bb3', intervals.determine('C', 'Ebb', True))
         self.assertEqual('b1', intervals.determine('C', 'Cb', True))
         self.assertEqual('#1', intervals.determine('Cb', 'C', True))

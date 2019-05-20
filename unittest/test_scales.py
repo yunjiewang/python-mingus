@@ -3,7 +3,7 @@
 
 import sys
 sys.path += ['../']
-import mingus.core.scales as scales
+import mingus3.core.scales as scales
 import unittest
 
 class test_scales(unittest.TestCase):

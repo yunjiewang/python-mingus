@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import sys
 sys.path += ['../']
-import mingus.extra.tablature as tablature
-import mingus.extra.tunings as tunings
+import mingus3.extra.tablature as tablature
+import mingus3.extra.tunings as tunings
 import unittest
 
 
